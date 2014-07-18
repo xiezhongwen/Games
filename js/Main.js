@@ -84,6 +84,8 @@ function gameInit(result){
 }
 //-----欢迎页面结束-----
 
+
+
 function changePage1(){
 /*	var back;
     back = new LSprite();*/
@@ -97,6 +99,8 @@ function changePage1(){
 	onup();
 	Bound();
 
+	
+
 	backGroundLayer.graphics.drawRect(1,"#fff",[200,270,500,150]);
 	var clickText=new LTextField();
 	clickText.color="#fff";
@@ -107,6 +111,10 @@ function changePage1(){
 	backGroundLayer.addChild(clickText);
 	backGroundLayer.addEventListener(LMouseEvent.MOUSE_DOWN,changePage);
 }
+
+ctx.fillStyle = '#000000';
+ctx.globalAlpha = Math.max((step.distance + step.shading) / this.lightRange - map.light, 0);
+ctx.fillRect(left, wall.top, width, wall.height);
 //-----游戏场景-----
 function changePage(){
 /*	var back;
@@ -120,6 +128,7 @@ function changePage(){
   /*  backGroundLayer.addChild(back);*/
 	onup();
 	Bound();
+
 
 	
 	//-----------玩家1出现（梅西）------------
